@@ -5,4 +5,18 @@ function doAllTheThings() {
     return true;
 }
 
-module.exports = { doAllTheThings };
+const add = (number) => {
+    let sum = 0;
+    if (number !== '') {
+        let nums = number.toString().split(',');
+        if (nums.length === 1){
+            sum = parseInt(nums[0]);
+        }
+        else if (nums.length === 2) {
+            sum = parseInt(nums[0]) + parseInt(nums[1]);
+        }
+    }
+    return sum;
+}
+
+module.exports = { doAllTheThings, add };
