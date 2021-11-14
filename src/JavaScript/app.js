@@ -6,17 +6,12 @@ function doAllTheThings() {
 }
 
 const add = (number) => {
-    console.log("Passed in number is: ", number)
     let sum = 0;
     if (number !== '') {
         let nums = number.toString().split(',');
-        console.log(nums)
-        if (nums.length === 1){
-            sum = parseInt(nums[0]);
-        }
-        else if (nums.length === 2) {
-            sum = parseInt(nums[0]) + parseInt(nums[1]);
-        }
+        nums.forEach((num) => {
+            sum += parseInt(num);
+        });
     }
     return sum;
 }

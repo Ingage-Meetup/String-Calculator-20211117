@@ -17,8 +17,7 @@ test('add 2 values', () => {
     expect(add('2, 4')).toBe(6);
 });
 
-// test('arbitrary number of arguments supported', () => {
-    
-
-// });
+test('arbitrary number of arguments supported', () => {
+    expect(add('1,2,3,4,5,6')).toBe(21);
+});
 
