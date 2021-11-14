@@ -1,7 +1,9 @@
+
 # String Calculator - An Incremental TDD Kata
+
 A TDD kata where you create a simple string calculator
 
-## Before you start:
+## Before you start
 
 * Try not to read ahead.
 * Do one task at a time. The trick is to learn to work incrementally.
@@ -37,44 +39,22 @@ The following input is NOT ok: `“1,\n”` (not need to prove it - just clarify
 
 ### Step 4
 
-Support different delimiters:
-
-To change a delimiter, the beginning of the string will contain a separate line that looks like this: 
-
->`“//[delimiter]\n[numbers…]”` 
-
-For example `“//;\n1;2”` should return three where the delimiter is `‘;’`.
-
-All existing scenarios should still be supported.
-
-### Step 5
-
 Calling Add with a negative number will throw an exception `“negatives not allowed”`.
 
 Show the offending negative in the exception message. If there are multiple negatives, show all of them.
 
-### Step 6
+### Step 5
 
 Numbers greater than 1000 should be ignored. For example, an input of `2,1001` results in an output of `2`.
 
+### Step 6
+
+Extend your calculator to handle subtraction. Assume the same requirements as additions (steps 1-5).
+
 ### Step 7
 
-Delimiters can be of any length with the following format:
-
->`“//[delimiter]\n”` 
-
-For example: `“//[***]\n1***2***3”` should return 6.
+Extend your calculator to handle multiplication. Assume the same requirements as additions (steps 1-5).
 
 ### Step 8
 
-Allow multiple delimiters like this:
-
-`//[delim1][delim2]\n` 
-
-For example `//[*][%]\n1*2%3` should return 6.
-
-### Step 9
-
-Make sure you can also handle multiple delimiters with length longer than one character.
-
-For example, `//[**][%%]\n1**2%%3` == 6.
+Extend your calculator to handle division. Assume the same requirements as additions (steps 1-5).
