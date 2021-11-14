@@ -5,24 +5,4 @@ function doAllTheThings() {
     return true;
 }
 
-const add = (number) => {
-    let sum = 0;
-    let negatives = [];
-    if (number !== '') {
-        let nums = number.toString().split(/[\n,]+/);
-        nums.forEach((num) => {
-            if (num < 0) {
-                negatives.push(num);
-            }
-            else {
-                sum += parseInt(num);                
-            }
-        });
-        if (negatives.length > 0) {
-            throw("negatives not allowed " + negatives)
-        }
-    }
-    return sum;
-}
-
-module.exports = { doAllTheThings, add };
+module.exports = { doAllTheThings };
