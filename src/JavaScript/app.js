@@ -64,4 +64,23 @@ const mul = (number) => {
     return product;
 }
 
-module.exports = { doAllTheThings, add, sub, mul };
+const div = (number) => {
+    let quotient = 0;
+    let negatives = [];
+    if (number !== '') {
+        let nums = number.toString().split(/[\n,]+/);
+        if (nums[0] < 0) {
+            negatives.push(nums[0]);
+        }
+        if (nums[1] < 0) {
+            negatives.push(nums[1]);
+        }
+        if (negatives.length > 0) {
+            throw ("negatives not allowed " + negatives)
+        }
+        quotient = nums[0]/nums[1];
+    }
+    return quotient;
+}
+
+module.exports = { doAllTheThings, add, sub, mul, div };

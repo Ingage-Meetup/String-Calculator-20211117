@@ -1,4 +1,4 @@
-const { doAllTheThings, add, sub, mul } = require('./app');
+const { doAllTheThings, add, sub, mul, div } = require('./app');
 
 // This is a Jest unit test - see https://jestjs.io/docs/en/getting-started for more information
 test('doAllTheThings should be true', () => {
@@ -37,11 +37,11 @@ test('work for input = 1000', () => {
     expect(add('1,2,1000')).toBe(1003);
 });
 
-test('basic subtraction', () => {
+test('subtract - basic subtraction', () => {
     expect(sub('5,3')).toBe(2);
 });
 
-test('newline delimiter', () => {
+test('subtract - newline delimiter', () => {
     expect(sub('5\n3')).toBe(2);
 });
 
@@ -67,4 +67,16 @@ test('multiplication - ignore > 1000', () => {
 
 test('multiplication - work for input = 1000', () => {
     expect(mul('1,2,1000')).toBe(2000);
+});
+
+test('divide - basic division', () => {
+    expect(div('6,3')).toBe(2);
+});
+
+test('divide - newline delimiter', () => {
+    expect(div('9\n3')).toBe(3);
+});
+
+test('divide - reject negatives', () => {
+    expect(() => { div('-1, -2') }).toThrow("negatives not allowed");
 });
