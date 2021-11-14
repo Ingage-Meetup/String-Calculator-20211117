@@ -15,14 +15,35 @@ const add = (number) => {
                 negatives.push(num);
             }
             else if (num <= 1000) {
-                sum += parseInt(num);                
+                sum += parseInt(num);
             }
         });
         if (negatives.length > 0) {
-            throw("negatives not allowed " + negatives)
+            throw ("negatives not allowed " + negatives)
         }
     }
     return sum;
 }
 
-module.exports = { doAllTheThings, add };
+const sub = (number) => {
+    let diff = 0;
+    let negatives = [];
+    if (number !== '') {
+        let nums = number.toString().split(/[\n,]+/);
+        if (nums[0] < 0) {
+            negatives.push(nums[0]);
+        }
+        if (nums[1] < 0) {
+            negatives.push(nums[1]);
+        }
+        if (negatives.length > 0) {
+            throw ("negatives not allowed " + negatives)
+        }
+        diff = nums[0] - nums[1];
+    }
+    return diff;
+}
+
+
+
+module.exports = { doAllTheThings, add, sub };
