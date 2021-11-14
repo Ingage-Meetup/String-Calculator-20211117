@@ -12,3 +12,7 @@ test('empty string returns 0', () => {
 test('single argument returns the passed in value', () => {
     expect(add(8)).toBe(8);
 });
+
+test('arbitrary number of arguments supported', () => {
+    
+});
