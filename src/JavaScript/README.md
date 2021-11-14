@@ -49,7 +49,7 @@ Numbers greater than 1000 should be ignored. For example, an input of `2,1001` r
 
 ### Step 6
 
-Extend your calculator to handle subtraction. Assume the same requirements as additions (steps 1-5).
+Extend your calculator to handle subtraction. Assume an input of two numbers, the second number being subtracted from the first. Also disregard the restriction to numbers less than 1000. 
 
 ### Step 7
 
