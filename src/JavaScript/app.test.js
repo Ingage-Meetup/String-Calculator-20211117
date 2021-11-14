@@ -28,3 +28,7 @@ test('comma AND newline delimeter', () => {
 test('reject negatives', () => { 
     expect(() => { add('-1, -2, -3'); }).toThrow("negatives not allowed");
 });
+
+test('ignore > 1000', () => {
+    expect(add('1,2,1001')).toBe(3);
+});
