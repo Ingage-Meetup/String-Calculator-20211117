@@ -7,11 +7,20 @@ function doAllTheThings() {
 
 const add = (number) => {
     let sum = 0;
+    let negatives = [];
     if (number !== '') {
         let nums = number.toString().split(/[\n,]+/);
         nums.forEach((num) => {
-            sum += parseInt(num);
+            if (num < 0) {
+                negatives.push(num);
+            }
+            else {
+                sum += parseInt(num);                
+            }
         });
+        if (negatives.length > 0) {
+            throw("negatives not allowed " + negatives)
+        }
     }
     return sum;
 }

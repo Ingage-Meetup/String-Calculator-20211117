@@ -24,3 +24,7 @@ test('arbitrary number of arguments supported', () => {
 test('comma AND newline delimeter', () => {
     expect(add('1\n2,3')).toBe(6)
 });
+
+test('reject negatives', () => { 
+    expect(() => { add('-1, -2, -3'); }).toThrow("negatives not allowed");
+});
