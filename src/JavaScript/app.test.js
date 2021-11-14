@@ -21,3 +21,6 @@ test('arbitrary number of arguments supported', () => {
     expect(add('1,2,3,4,5,6')).toBe(21);
 });
 
+test('comma AND newline delimeter', () => {
+    expect(add('1\n2,3')).toBe(6)
+});

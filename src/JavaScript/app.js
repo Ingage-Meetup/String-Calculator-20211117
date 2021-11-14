@@ -8,7 +8,7 @@ function doAllTheThings() {
 const add = (number) => {
     let sum = 0;
     if (number !== '') {
-        let nums = number.toString().split(',');
+        let nums = number.toString().split(/[\n,]+/);
         nums.forEach((num) => {
             sum += parseInt(num);
         });
