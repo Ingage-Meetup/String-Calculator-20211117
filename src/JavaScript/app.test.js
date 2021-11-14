@@ -32,3 +32,7 @@ test('reject negatives', () => {
 test('ignore > 1000', () => {
     expect(add('1,2,1001')).toBe(3);
 });
+
+test('work for input = 1000', () => {
+    expect(add('1,2,1000')).toBe(1003);
+});
