@@ -44,6 +44,24 @@ const sub = (number) => {
     return diff;
 }
 
+const mul = (number) => {
+    let product = 1;
+    let negatives = [];
+    if (number !== '') {
+        let nums = number.toString().split(/[\n,]+/);
+        nums.forEach((num) => {
+            if (num < 0) {
+                negatives.push(num);
+            }
+            else if (num <= 1000) {
+                product *= parseInt(num);
+            }
+        });
+        if (negatives.length > 0) {
+            throw ("negatives not allowed " + negatives)
+        }
+    }
+    return product;
+}
 
-
-module.exports = { doAllTheThings, add, sub };
+module.exports = { doAllTheThings, add, sub, mul };
